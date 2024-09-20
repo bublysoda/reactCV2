@@ -1,10 +1,14 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { formBlank } from './App'
+import { FormPersonal } from './App'
+import { FormSchool } from './App'
+import { FormWork } from './App'
 import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <FormPersonal />
+    <FormSchool />
+    <FormWork />
   </StrictMode>,
 )
