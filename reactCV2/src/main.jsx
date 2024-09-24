@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { FormPersonal } from './App'
 import { FormSchool } from './App'
 import { FormWork } from './App'
+import { PersonalInfoResume } from './App'
 import './index.css'
 
 createRoot(document.getElementById('root')).render(
@@ -10,5 +11,6 @@ createRoot(document.getElementById('root')).render(
     <FormPersonal />
     <FormSchool />
     <FormWork />
+    <PersonalInfoResume />
   </StrictMode>,
 )

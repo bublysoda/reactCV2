@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from "react";
 
 import './App.css'
 
@@ -17,6 +17,8 @@ export function FormPersonal(){
     <label htmlFor="phone">Enter your phone number:</label>
     <input type='tel' id='phone' placeholder='123-456-7890'/>
     <br></br>
+    <button onClick={PersonalInfoResume()}>Submit or Update Personal Info</button>
+    <br></br>
   </div>
 }
 
@@ -31,6 +33,8 @@ export function FormSchool(){
     <br></br>
     <label htmlFor="completeDay">Enter when you finished attending here:</label>
     <input type='month' id='completeDay' placeholder='September 2001'/>
+    <br></br>
+    <button>Submit Education Experience</button>
     <br></br>
   </div>
 }
@@ -47,5 +51,21 @@ export function FormWork(){
     <label htmlFor="endDay">Enter the day you stopped working here, or the current day if you still work here:</label>
     <input type='month' id='endDay' placeholder='September 2003'/>
     <br></br>
+    <button>Submit Work Experience</button>
+    <br></br>
   </div>
 }
+
+let fNameText = 'Jeffery'
+
+export function PersonalInfoResume(){
+  const [fName, setfName] = useState(fNameText)
+  const handlefNameChange = () =>{
+    const newfName = document.getElementById("fName").textContent
+    setfName(newfName)
+  };
+  return <div className="nameCombo">
+    {fName}
+  </div>
+}
+
